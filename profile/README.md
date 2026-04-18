@@ -69,30 +69,30 @@ Server-Side Geofencing: Independent validation of GPS coordinates using the Have
 This organization hosts three separate repositories:
 
 ```
-aplano/
-├── aplano-mobile        # Flutter mobile app (iOS + Android)
-├── aplano-web          # Web dashboard (React / Next.js)
-└── aplano-backend          # Backend REST API (Node.js / Python)
+planno/
+├── planno-mobile        # Flutter mobile app (iOS + Android)
+├── planno-web          # Web dashboard (React / Typescript)
+└── planno-backend          # Backend REST API (Node.js)
 ```
 
 ---
 
 ## Tech Stack
 
-### Mobile (`aplano-mobile`)
+### Mobile (`planno-mobile`)
 - **Framework:** Flutter (Dart)
 - **State Management:** TBD (Provider / Riverpod / Bloc)
 - **Location:** `geolocator` package for GPS and geofencing
 - **Design:** Custom design system — `AppColors`, `AppTextStyles`, `AppDimensions`, `AppTheme`
 - **Platforms:** iOS 14+ / Android 8+
 
-### Web (`aplano-web`)
+### Web (`planno-web`)
 - **Framework:** React + Next.js
 - **Styling:** Tailwind CSS
 - **Auth:** JWT / OAuth
 - **Maps:** Mapbox or Google Maps
 
-### Backend (`aplano-api`)
+### Backend (`planno-api`)
 - **Runtime:** Node.js (Express) with Prisma ORM and TypeScript.
 - **Database:** PostgreSQL 
 - **Auth:** JWT with refresh tokens
@@ -116,8 +116,8 @@ aplano/
 
 ```bash
 # Clone the repo
-git clone https://github.com/aplano/aplano-mobile.git
-cd aplano-mobile
+git clone https://github.com/planno/planno-mobile.git
+cd planno-mobile
 
 # Install dependencies
 flutter pub get
@@ -139,7 +139,7 @@ flutter build ios         # iOS
 **Environment configuration** — create a `.env` or `lib/config/env.dart` file:
 
 ```dart
-const String apiBaseUrl = 'https://api.aplano.com/v1';
+const String apiBaseUrl = 'https://api.planno.com/v1';
 const String mapsApiKey = 'YOUR_MAPS_API_KEY';
 ```
 
@@ -148,8 +148,8 @@ const String mapsApiKey = 'YOUR_MAPS_API_KEY';
 ### Web App
 
 ```bash
-git clone https://github.com/aplano/aplano-web.git
-cd aplano-web
+git clone https://github.com/planno/planno-web.git
+cd planno-web
 
 npm install
 npm run dev       # Development server at http://localhost:3000
@@ -162,8 +162,8 @@ npm start         # Start production server
 ### Backend API
 
 ```bash
-git clone https://github.com/aplano/aplano-api.git
-cd aplano-api
+git clone https://github.com/planno/planno-api.git
+cd planno-api
 
 # Install dependencies
 npm install        # or: pip install -r requirements.txt
@@ -182,11 +182,11 @@ npm run dev        # http://localhost:8000
 **Required environment variables:**
 
 ```env
-DATABASE_URL=postgresql://user:password@localhost:5432/aplano
+DATABASE_URL=postgresql://user:password@localhost:5432/planno
 JWT_SECRET=your_super_secret_key
 JWT_REFRESH_SECRET=your_refresh_secret
 PORT=8000
-ALLOWED_ORIGINS=http://localhost:3000,https://app.aplano.com
+ALLOWED_ORIGINS=http://localhost:3000,https://app.planno.com
 ```
 
 ---
@@ -271,7 +271,7 @@ ALLOWED_ORIGINS=http://localhost:3000,https://app.aplano.com
 
 ## API Overview
 
-> Full API documentation will be maintained in `aplano-api/docs/` or via Swagger/OpenAPI.
+> Full API documentation will be maintained in `planno-api/docs/` or via Swagger/OpenAPI.
 
 ### Auth
 ```
