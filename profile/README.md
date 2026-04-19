@@ -366,6 +366,7 @@ A complete `ThemeData` configuration using Material 3, covering `ElevatedButton`
 ---
 
 ## License
+MIT License
 
 Copyright © 2024 planno. All rights reserved.
 
